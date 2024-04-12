@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script defer type='text/javascript' src='./index.js'></script>
+    <link rel='stylesheet' href='./style.css' />
+    <title>Fighters of The Multiverse</title>
 </head>
+
 <body>
-    
+    <div id="title-container">
+        <h1 id="title">Fighters Of the Multiverse</h1>
+        <h2 id="created-by">Created by Fernando, Grant and Joel</h2>
+    </div>
+    <div id="character-container">
+        <!--Characters render here-->
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+        <div class="character-card">
+            <img class="character-img" src="https://m.media-amazon.com/images/I/71RYSZirOEL.jpg" alt="Waldo-pic">
+            <h3>Waldo</h3>
+            <p>Uses vanish to hide from enemies until they starve and die</p>
+            <p>Uses cane attack to beat his enemies to death</p>
+        </div>
+    </div>
+
+    <div id="battle-container">
+        <div id="player1-container">
+           <!--Player one populates this-->
+        </div>
+
+        <div id="fight-button-container">
+            <button id="start-fight-button">Start Fight!</button>
+        </div>
+
+        <div id="player2-container">
+            <!--Player two populates this-->
+        </div>
+    </div>
+
+
+    <div id="edit-add-characters">
+        <div class="edit-add-character-containers" id="add-character-container">
+            <form id="add-character-form">
+                <h4>Add New Fighter: </h4>
+                <label for='name'>Name: </label>
+                <input type='text' name='name' />
+                <br />
+                <label for='image'>Image URL: </label>
+                <input type='text' name='image' />
+                <br />
+                <label for='finisher1'>Finisher 1: </label>
+                <input type='text' name='finisher1' />
+                <br />
+                <label for='finisher2'>Finisher 2: </label>
+                <input type='text' name='finisher2' />
+                <button type='submit'>Add New Character</button>
+            </form>
+        </div>
+        <div class="edit-add-character-containers" id="edit-character-container">
+            <form id="edit-character-form">
+                <h4>Edit Fighter: </h4>
+                <label for='name'>Name: </label>
+                <input type='text' name='name' />
+                <br />
+                <label for='image'>Image URL: </label>
+                <input type='text' name='image' />
+                <br />
+                <label for='finisher1'>Finisher 1: </label>
+                <input type='text' name='finisher1' />
+                <br />
+                <label for='finisher2'>Finisher 2: </label>
+                <input type='text' name='finisher2' />
+                <button type='submit'>Submit Update</button>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>
