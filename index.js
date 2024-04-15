@@ -10,41 +10,52 @@ function renderChar(charArr){
     charCard.innerHTML = ""
 
     charArr.forEach((charObj) => {
-        const div = document.createElement('div')
-        div.className = "character-card"
+        const charCardDiv = document.createElement('div')
+        charCardDiv.className = "character-card"
 
-        div.addEventListener('mouseover', changeColor)
+        charCardDiv.addEventListener('mouseover', changeColor)
         function changeColor(){
-            div.style.color = 'blue'
+            charCardDiv.style.color = 'blue'
         }
 
-        div.addEventListener('mouseout', changeColorBack)
+        charCardDiv.addEventListener('mouseout', changeColorBack)
         function changeColorBack(){
-            div.style.color = 'black'
+            charCardDiv.style.color = 'black'
         }
         
         const img = document.createElement('img')
-        img.className = "character-img"
-        let imgUrl = charObj.image
-        img.src = imgUrl
-
         const h3 = document.createElement('h3')
-        let charName = charObj.name
-        h3.textContent = charName
-
-        const p = document.createElement('p')
-        let charFinisher = charObj.finisher1
-        p.textContent = charFinisher
-
+        const p = document.createElement('p') 
         const p2 = document.createElement('p')
-        let charFinisher2 = charObj.finisher2
-        p2.textContent = charFinisher2
+        const editCharBtn = document.createElement('button')
+        
 
-        div.append(img, h3, p, p2)
+        img.className = "character-img"
+        img.src = charObj.image
+        h3.textContent = charObj.name
+        p.textContent = charObj.finisher1
+        p2.textContent = charObj.finisher2
+        editCharBtn.textContent = "Edit Fighter"
+    
+        charCardDiv.append(img, h3, p, p2, editCharBtn)
+        charCard.appendChild(charCardDiv)
 
-        charCard.appendChild(div)
     })
 }
+
+    //! Needs param to be the character being edited
+    function editChar(charObjToEdit) {
+        editCharForm.name.value = charObjToEdit.name
+        editCharForm.image.value = charObjToEdit.image
+        editCharForm.finisher1.value = charObjToEdit.finisher1
+        editCharForm.finisher2.value = charObjToEdit.finisher2
+    }
+
+
+
+
+
+
 
 const charURL = 'http://localhost:3000/characters'
     const addCharForm = document.querySelector('#add-character-form')
@@ -75,13 +86,11 @@ const charURL = 'http://localhost:3000/characters'
         })
         .then(res => res.json())
         .then(data => displayAllChar())
+
+        addCharForm.name.value = ""
+        addCharForm.image.value = ""
+        addCharForm.finisher1.value = ""
+        addCharForm.finisher2.value = ""
     }
     
 
-    //! Needs param to be the character being edited
-    function editChar(charObjToEdit) {
-        editCharForm.name.value = charObjToEdit.name
-        editCharForm.image.value = charObjToEdit.image
-        editCharForm.finisher1.value = charObjToEdit.finisher1
-        editCharForm.finisher2.value = charObjToEdit.finisher2
-    }
