@@ -36,9 +36,13 @@ function renderChar(charArr){
 
         img.className = "character-img"
         img.src = charObj.image
+
         h3.textContent = charObj.name
+
         p.textContent = charObj.finisher1
+
         p2.textContent = charObj.finisher2
+
         editCharBtn.textContent = "Edit Fighter"
         editCharBtn.id = charObj.id
     
