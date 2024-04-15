@@ -7,13 +7,18 @@ function renderChar(charArr){
 
     charArr.forEach((charObj) => {
         const div = document.createElement('div')
+        div.className = "character-card"
         
         const img = document.createElement('img')
+        img.className = "character-img"
         let imgUrl = charObj.image
         img.src = imgUrl
 
         const h3 = document.createElement('h3')
         let charName = charObj.name
+        h3.textContent = charName
+
+        div.append(img, h3)
 
         charCard.appendChild(div)
     })
