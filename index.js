@@ -24,6 +24,46 @@ function renderChar(charArr){
     })
 }
 
+const charURL = 'http://localhost:3000/characters'
+    const addCharForm = document.querySelector('#add-character-form')
+    const editCharForm = document.querySelector('#edit-character-form')
+    
+    addCharForm.addEventListener('submit', e => handleAddNewChar(e))
+    
+    
+    function handleAddNewChar(e){
+        e.preventDefault()
+        
+        const newCharObj = {
+            name: e.target.name.value,
+            image: e.target.image.value,
+            wins: " ",
+            loses: " ", 
+            finisher1: e.target.finisher1.value,
+            finisher2: e.target.finisher2.value
+        }
+    
+        fetch(charURL, {
+            method : 'POST',
+            headers : {
+                'Accept' : 'application/json',
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(newCharObj)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+    
+
+    //! Needs param to be the character being edited
+    function editChar(charObjToEdit) {
+        editCharForm.name.value = charObjToEdit.name
+        editCharForm.image.value = charObjToEdit.image
+        editCharForm.finisher1.value = charObjToEdit.finisher1
+        editCharForm.finisher2.value = charObjToEdit.finisher2
+    }
+
 
 
 
