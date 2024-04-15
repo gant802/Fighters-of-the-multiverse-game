@@ -13,6 +13,16 @@ function renderChar(charArr){
     charArr.forEach((charObj) => {
         const div = document.createElement('div')
         div.className = "character-card"
+
+        div.addEventListener('mouseover', changeColor)
+        function changeColor(){
+            div.style.color = 'blue'
+        }
+
+        div.addEventListener('mouseout', changeColorBack)
+        function changeColorBack(){
+            div.style.color = 'black'
+        }
         
         const img = document.createElement('img')
         img.className = "character-img"
