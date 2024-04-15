@@ -1,6 +1,9 @@
+function displayAllChar() {
 fetch ("http://localhost:3000/characters")
     .then((resp) => resp.json())
     .then (data => renderChar(data))
+}
+displayAllChar()
 
 function renderChar(charArr){
     const charCard = document.querySelector("#character-container")
@@ -52,7 +55,7 @@ const charURL = 'http://localhost:3000/characters'
             body : JSON.stringify(newCharObj)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => displayAllChar())
     }
     
 
