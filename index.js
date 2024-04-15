@@ -52,11 +52,6 @@ function renderChar(charArr){
     }
 
 
-
-
-
-
-
 const charURL = 'http://localhost:3000/characters'
     const addCharForm = document.querySelector('#add-character-form')
     const editCharForm = document.querySelector('#edit-character-form')
