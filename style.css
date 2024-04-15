@@ -1,4 +1,5 @@
 
+
 /*General CSS*/
 body {
     margin: 0;
@@ -21,7 +22,6 @@ body {
     margin: 0 auto;
     padding-bottom: 20px;
 }
-
 
 /* Character cards */
 #character-container {
@@ -47,7 +47,6 @@ body {
     height: 12rem;
     padding-top: 10px;
 }
-
 
 /* Battle Area */ 
 #battle-container {
@@ -77,8 +76,6 @@ body {
     border-radius: 20px;
 }
 
-
-
 /* Edit and add characters */ 
 #edit-add-characters {
     width: 1000px;
@@ -92,5 +89,7 @@ body {
     width: 300px;display: flex;
     justify-content: space-around;
     border: 3px solid black;
+
 }
+
 
