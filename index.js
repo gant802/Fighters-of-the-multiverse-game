@@ -28,7 +28,7 @@ function renderChar(charArr){
         const p = document.createElement('p') 
         const p2 = document.createElement('p')
         const editCharBtn = document.createElement('button')
-        
+        const addCharBtn = document.createElement('button')
 
         img.className = "character-img"
         img.src = charObj.image
@@ -36,10 +36,16 @@ function renderChar(charArr){
         p.textContent = charObj.finisher1
         p2.textContent = charObj.finisher2
         editCharBtn.textContent = "Edit Fighter"
+        editCharBtn.id = charObj.id
     
-        charCardDiv.append(img, h3, p, p2, editCharBtn)
+        charCardDiv.append(img, h3, p, p2, editCharBtn,)
         charCard.appendChild(charCardDiv)
-
+        
+        editCharBtn.addEventListener('click',(e) => {
+            const charFound = charArr.find(char => char.id === e.target.id)
+            
+            editChar(charFound)
+        })
     })
 }
 
