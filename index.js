@@ -1,4 +1,5 @@
-function displayAllChar() {
+
+function displayAllChar(){
 fetch ("http://localhost:3000/characters")
     .then((resp) => resp.json())
     .then (data => renderChar(data))
@@ -7,6 +8,7 @@ displayAllChar()
 
 function renderChar(charArr){
     const charCard = document.querySelector("#character-container")
+    charCard.innerHTML = ""
 
     charArr.forEach((charObj) => {
         const div = document.createElement('div')
@@ -21,7 +23,15 @@ function renderChar(charArr){
         let charName = charObj.name
         h3.textContent = charName
 
-        div.append(img, h3)
+        const p = document.createElement('p')
+        let charFinisher = charObj.finisher1
+        p.textContent = charFinisher
+
+        const p2 = document.createElement('p')
+        let charFinisher2 = charObj.finisher2
+        p2.textContent = charFinisher2
+
+        div.append(img, h3, p, p2)
 
         charCard.appendChild(div)
     })
@@ -66,48 +76,3 @@ const charURL = 'http://localhost:3000/characters'
         editCharForm.finisher1.value = charObjToEdit.finisher1
         editCharForm.finisher2.value = charObjToEdit.finisher2
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function renderCharacters(charArr) {
-//     const ul = document.querySelector('ul')
-//     charArr.forEach((charObj) => {
-//         const li = document.createElement('li')
-
-//         // grabs name from object and places it within <p> tag
-//         const p = document.createElement('p')
-//         let name = charObj.name
-//         p.textContent = name
-//         p.style.color = '#7a2d96'
-
-//         // grabs image URL from object and sets it to <img> tag src
-//         const img = document.createElement('img')
-//         let imgURL = charObj.image
-//         img.src = imgURL
-//         img.style.margin = '5px'
-//         img.style.border = 'solid 2px #7a2d96'
-
-//         // combine DOM tree to render to screen
-//         li.appendChild(p)
-//         li.appendChild(img)
-//         // li.append(p, img)
-
-//         ul.append(li)
-
-//     })
-// }

@@ -1,7 +1,7 @@
 {
   "characters": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Charizard",
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
       "wins": " ",
@@ -10,7 +10,7 @@
       "finisher2": "SEISMIC TOSS!"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Naruto",
       "image": "https://pbs.twimg.com/profile_images/1493371665694138370/rSnYbeOm_400x400.jpg",
       "wins": " ",
@@ -19,7 +19,7 @@
       "finisher2": "TALK NO JUTSO!"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Rick",
       "image": "https://sportshub.cbsistatic.com/i/2022/08/15/003d091c-a3e6-4a32-8dda-e6a5189007fd/rick-and-morty-season-6-rick-tech-upgrades-tease.jpg",
       "wins": " ",
@@ -28,7 +28,7 @@
       "finisher2": "LAZER GUN!"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Finn",
       "image": "https://qph.cf2.quoracdn.net/main-qimg-df6f63f7251c7d92f1a004eaa7fe003b",
       "wins": " ",
@@ -37,7 +37,7 @@
       "finisher2": "FINN SWORD!"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Eric Cartman",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cT58_gg6ldSi3DyxggyaPn0xoUzs9jqerw&s",
       "wins": " ",
@@ -46,7 +46,7 @@
       "finisher2": "ANNOY YOU TO DEATH!"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Peter Griffin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmcRwEfXYl807XpQtVpiseexD3B5w8yCKEw&usqp=CAU",
       "wins": " ",
@@ -55,7 +55,7 @@
       "finisher2": "GANGSTA ALTO EGO COMES OUT AND SHOOTS YOU!"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Crimson Chin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
       "wins": " ",
@@ -64,7 +64,7 @@
       "finisher2": "CHIN SLAP!"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Waldo",
       "image": "https://m.media-amazon.com/images/I/71RYSZirOEL.jpg",
       "wins": " ",
@@ -73,7 +73,7 @@
       "finisher2": "CANE ATTACK"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Samus",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS5gI5-JhBygy4_vBShjiCPYJfjc1qhXacw&s",
       "wins": " ",
@@ -82,7 +82,7 @@
       "finisher2": "DROPS BOMB"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
       "wins": " ",
