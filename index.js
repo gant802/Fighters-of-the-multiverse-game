@@ -28,7 +28,7 @@ function renderChar(charArr){
         const p = document.createElement('p') 
         const p2 = document.createElement('p')
         const editCharBtn = document.createElement('button')
-        const addCharBtn = document.createElement('button')
+        
 
         img.className = "character-img"
         img.src = charObj.image
@@ -43,11 +43,26 @@ function renderChar(charArr){
         
         editCharBtn.addEventListener('click',(e) => {
             const charFound = charArr.find(char => char.id === e.target.id)
-            
+            editCharForm.dataset.id = e.target.id 
             editChar(charFound)
-        })
+        }) 
     })
-}
+} 
+      editCharForm.addEventListener('submit', (e) => { 
+        e.preventDefault() 
+        const updatedChar ={ 
+            name: e.target.name.value ,
+            image: e.target.image.value, 
+            
+        } 
+        fetch("http://localhost:3000/characters/" + editCharForm.dataset.id, { 
+            method:'PATCH', 
+            headers: { 
+               'Content-type' : 'application/json'
+            }, 
+            body: JSON.stringify(updatedChar)
+        } )
+      })
 
     //! Needs param to be the character being edited
     function editChar(charObjToEdit) {
