@@ -9,6 +9,14 @@ displayAllChar()
 const charURL = 'http://localhost:3000/characters'
     const addCharForm = document.querySelector('#add-character-form')
     const editCharForm = document.querySelector('#edit-character-form')
+    let isPopulated = false 
+const p1Container = document.querySelector('#player1-container') 
+const p2Container = document.querySelector('#player2-container') 
+const startFightBtn = document.querySelector('#start-fight-button')
+
+
+
+
 
 function renderChar(charArr){
     const charCard = document.querySelector("#character-container")
@@ -37,7 +45,7 @@ function renderChar(charArr){
 
         img.className = "character-img"
         img.src = charObj.image
-
+        img.id = charObj.id 
         h3.textContent = charObj.name
 
         p.textContent = charObj.finisher1
@@ -56,6 +64,21 @@ function renderChar(charArr){
             editCharForm.dataset.id = e.target.id 
             editChar(charFound)
         }) 
+        img.addEventListener('click', (e) => { 
+            const charFound = charArr.find(char => char.id === e.target.id) 
+            if (isPopulated === false ){ 
+               const img = document.createElement('img')  
+               img.src = charFound.image
+               img.id = charFound.id 
+               p1Container.appendChild(img) 
+               isPopulated = true
+            } else { 
+            const img = document.createElement('img')  
+               img.src = charFound.image
+               img.id = charFound.id
+               p2Container.appendChild(img) 
+            }
+        })
     })
 } 
       editCharForm.addEventListener('submit', (e) => { 
@@ -142,4 +165,14 @@ function renderChar(charArr){
         addCharForm.finisher2.value = ""
     }
     
-
+startFightBtn.addEventListener('click', (e) => { 
+    fetch ("http://localhost:3000/characters")
+    .then((resp) => resp.json())
+    .then (data => { 
+        const p1Id = p1Container.querySelector('img').id
+        const p2Id = p2Container.querySelector('img').id 
+        const player1 = data.find(char => char.id === p1Id) 
+        const player2 = data.find(char => char.id === p2Id)  
+        console.log(player1,player2)
+    })
+})
