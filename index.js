@@ -13,6 +13,9 @@ const charURL = 'http://localhost:3000/characters'
 const p1Container = document.querySelector('#player1-container') 
 const p2Container = document.querySelector('#player2-container') 
 const startFightBtn = document.querySelector('#start-fight-button')
+const finisher1Text = document.querySelector('#finisher1') 
+const finisher2Text = document.querySelector('#finisher2') 
+const winnerText = document.querySelector('#winner-name')
 
 
 
@@ -173,6 +176,21 @@ startFightBtn.addEventListener('click', (e) => {
         const p2Id = p2Container.querySelector('img').id 
         const player1 = data.find(char => char.id === p1Id) 
         const player2 = data.find(char => char.id === p2Id)  
-        console.log(player1,player2)
+        charBattle (player1, player2) 
+    
     })
-})
+}) 
+
+function charBattle (player1, player2) { 
+    let randNum = Math.floor(Math.random() * 100 ) + 1;
+    
+    if (randNum < 50) { 
+       winnerText.textContent = `The winner is ${player1.name}! Choose your finisher!` 
+       finisher1Text.textContent = `${player1.finisher1}` 
+       finisher2Text.textContent = `${player1.finisher2}`
+    } else { 
+        winnerText.textContent = `The winner is ${player2.name}! Choose your finisher!` 
+       finisher1Text.textContent = `${player2.finisher1}` 
+       finisher2Text.textContent = `${player2.finisher2}` 
+    }
+}
