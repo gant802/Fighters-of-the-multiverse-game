@@ -5,6 +5,11 @@ fetch ("http://localhost:3000/characters")
 }
 displayAllChar()
 
+
+const charURL = 'http://localhost:3000/characters'
+    const addCharForm = document.querySelector('#add-character-form')
+    const editCharForm = document.querySelector('#edit-character-form')
+
 function renderChar(charArr){
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
@@ -28,13 +33,17 @@ function renderChar(charArr){
         const p = document.createElement('p') 
         const p2 = document.createElement('p')
         const editCharBtn = document.createElement('button')
-        
+
 
         img.className = "character-img"
         img.src = charObj.image
+
         h3.textContent = charObj.name
+
         p.textContent = charObj.finisher1
+
         p2.textContent = charObj.finisher2
+
         editCharBtn.textContent = "Edit Fighter"
         editCharBtn.id = charObj.id
     
@@ -43,6 +52,7 @@ function renderChar(charArr){
         
         editCharBtn.addEventListener('click',(e) => {
             const charFound = charArr.find(char => char.id === e.target.id)
+
             editCharForm.dataset.id = e.target.id 
             editChar(charFound)
         }) 
@@ -72,18 +82,36 @@ function renderChar(charArr){
         editCharForm.finisher2.value = charObjToEdit.finisher2
     }
 
+    editCharForm.addEventListener('submit', e => {
+        e.preventDefault()
+
+       const updatedChar = {
+        name : e.target.name.value,
+        image : e.target.image.value,
+        finisher1 : e.target.finisher1.value,
+        finisher2 : e.target.finisher2.value
+       }
+
+       fetch(charURL + "/" + editCharForm.dataset.id, {
+        method : "PATCH", 
+        headers : {
+            "Content-type" : "application/json"
+        },
+        body : JSON.stringify(updatedChar)
+       })
+       .then(res => res.json())
+       .then(data => {
+        editCharForm.name.value = ""
+        editCharForm.image.value = ""
+        editCharForm.finisher1.value = ""
+        editCharForm.finisher2.value = ""
+        displayAllChar()
+       })
 
 
-
-
-
-
-const charURL = 'http://localhost:3000/characters'
-    const addCharForm = document.querySelector('#add-character-form')
-    const editCharForm = document.querySelector('#edit-character-form')
+    })
     
     addCharForm.addEventListener('submit', e => handleAddNewChar(e))
-    
     
     function handleAddNewChar(e){
         e.preventDefault()
