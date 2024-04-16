@@ -97,7 +97,7 @@ function renderChar(charArr){
         } )
       })
 
-    //! Needs param to be the character being edited
+
     function editChar(charObjToEdit) {
         editCharForm.name.value = charObjToEdit.name
         editCharForm.image.value = charObjToEdit.image
