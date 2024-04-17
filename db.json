@@ -5,7 +5,6 @@
       "name": "Charizard",
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
       "wins": 2,
-      "loses": 1,
       "loses": 0,
       "finisher1": "FLAMETHROWER!",
       "finisher2": "SEISMIC TOSS!"
@@ -59,8 +58,6 @@
       "id": "7",
       "name": "Crimson Chin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
-      "wins": 1,
-      "loses": 1,
       "wins": 0,
       "loses": 2,
       "finisher1": "IRON CHIN SMASH!",
@@ -80,7 +77,7 @@
       "name": "Samus",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS5gI5-JhBygy4_vBShjiCPYJfjc1qhXacw&s",
       "wins": 1,
-      "loses": 0,
+      "loses": 1,
       "finisher1": "CHARGE BLAST!",
       "finisher2": "DROPS BOMB"
     },
@@ -88,7 +85,7 @@
       "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
-      "wins": 0,
+      "wins": 1,
       "loses": 1,
       "finisher1": "SWORD!",
       "finisher2": "ONE INCH PUNCH!"
