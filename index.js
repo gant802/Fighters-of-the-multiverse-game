@@ -61,11 +61,10 @@ function renderChar(charArr) {
         deleteCharBtn.textContent = "Delete Fighter"
         deleteCharBtn.id = charObj.id
 
-        let parsedId = parseInt(charObj.id)
-        if (parsedId <= 10 && parsedId >= 1) {
-             charCardDiv.append(img, h3, p, p2, editCharBtn)
+        if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].includes(charObj.id)) {
+            charCardDiv.append(img, h3, p, p2, editCharBtn);
         } else {
-            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn)
+            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn);
         }
 
         charCard.appendChild(charCardDiv)
@@ -93,21 +92,6 @@ function renderChar(charArr) {
         })
     })
 }
-editCharForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const updatedChar = {
-        name: e.target.name.value,
-        image: e.target.image.value,
-
-    }
-    fetch("http://localhost:3000/characters/" + editCharForm.dataset.id, {
-        method: 'PATCH',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(updatedChar)
-    })
-})
 
 
 function editChar(charObjToEdit) {
@@ -255,3 +239,4 @@ function winLoseUpdate(winner, loser) {
 
 
 //! Need to display wins and losses on card
+
