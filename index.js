@@ -61,11 +61,10 @@ function renderChar(charArr) {
         deleteCharBtn.textContent = "Delete Fighter"
         deleteCharBtn.id = charObj.id
 
-        let parsedId = parseInt(charObj.id)
-        if (parsedId <= 10 && parsedId >= 1) {
-             charCardDiv.append(img, h3, p, p2, editCharBtn)
+        if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].includes(charObj.id)) {
+            charCardDiv.append(img, h3, p, p2, editCharBtn);
         } else {
-            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn)
+            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn);
         }
 
         charCard.appendChild(charCardDiv)
@@ -76,6 +75,12 @@ function renderChar(charArr) {
             editCharForm.dataset.id = e.target.id
             editChar(charFound)
         })
+
+        deleteCharBtn.addEventListener('click', (e) => {
+            const charFound = charArr.find(char => char.id === e.target.id)
+            deleteNewChar(charFound)
+        })
+
         img.addEventListener('click', (e) => {
             const charFound = charArr.find(char => char.id === e.target.id)
             if (isPopulated === false) {
@@ -93,21 +98,6 @@ function renderChar(charArr) {
         })
     })
 }
-editCharForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const updatedChar = {
-        name: e.target.name.value,
-        image: e.target.image.value,
-
-    }
-    fetch("http://localhost:3000/characters/" + editCharForm.dataset.id, {
-        method: 'PATCH',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(updatedChar)
-    })
-})
 
 
 function editChar(charObjToEdit) {
@@ -115,6 +105,14 @@ function editChar(charObjToEdit) {
     editCharForm.image.value = charObjToEdit.image
     editCharForm.finisher1.value = charObjToEdit.finisher1
     editCharForm.finisher2.value = charObjToEdit.finisher2
+}
+
+function deleteNewChar(charToDelete){
+    fetch(`http://localhost:3000/characters/${charToDelete.id}`, {
+        method: 'DELETE'
+    })
+    .then((resp) => resp.json())
+    .then(data => displayAllChar())
 }
 
 editCharForm.addEventListener('submit', e => {
