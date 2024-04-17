@@ -253,3 +253,4 @@ function winLoseUpdate(winner, loser) {
 
 
 //! Need to display wins and losses on card
+
