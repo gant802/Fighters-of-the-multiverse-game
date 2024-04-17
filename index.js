@@ -25,8 +25,9 @@ let isStartFightClicked = false
 function renderChar(charArr) {
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
-
+    
     charArr.forEach((charObj) => {
+        
         const charCardDiv = document.createElement('div')
         charCardDiv.className = "character-card"
 
@@ -45,21 +46,28 @@ function renderChar(charArr) {
         const p = document.createElement('p')
         const p2 = document.createElement('p')
         const editCharBtn = document.createElement('button')
+        const deleteCharBtn = document.createElement('button')
 
 
         img.className = "character-img"
         img.src = charObj.image
         img.id = charObj.id
         h3.textContent = charObj.name
-
         p.textContent = charObj.finisher1
-
         p2.textContent = charObj.finisher2
 
         editCharBtn.textContent = "Edit Fighter"
         editCharBtn.id = charObj.id
+        deleteCharBtn.textContent = "Delete Fighter"
+        deleteCharBtn.id = charObj.id
 
-        charCardDiv.append(img, h3, p, p2, editCharBtn,)
+        let parsedId = parseInt(charObj.id)
+        if (parsedId <= 10 && parsedId >= 1) {
+             charCardDiv.append(img, h3, p, p2, editCharBtn)
+        } else {
+            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn)
+        }
+
         charCard.appendChild(charCardDiv)
 
         editCharBtn.addEventListener('click', (e) => {
@@ -190,8 +198,10 @@ startFightBtn.addEventListener('click', (e) => {
         finisher2Text.textContent = "Finisher2"
         startFightBtn.textContent = "Start Fight!"
         isStartFightClicked = false
+        displayAllChar()
     }
 })
+
 
 function charBattle(player1, player2) {
     let randNum = Math.floor(Math.random() * 100) + 1;
@@ -242,3 +252,6 @@ function winLoseUpdate(winner, loser) {
         .then(res => res.json())
         .then(data => data)
 }
+
+
+//! Need to display wins and losses on card

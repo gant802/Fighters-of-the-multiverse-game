@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Charizard",
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
-      "wins": 1,
+      "wins": 2,
       "loses": 0,
       "finisher1": "FLAMETHROWER!",
       "finisher2": "SEISMIC TOSS!"
@@ -59,7 +59,7 @@
       "name": "Crimson Chin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
       "wins": 0,
-      "loses": 1,
+      "loses": 2,
       "finisher1": "IRON CHIN SMASH!",
       "finisher2": "CHIN SLAP!"
     },
