@@ -6,6 +6,7 @@
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
       "wins": 2,
       "loses": 1,
+      "loses": 0,
       "finisher1": "FLAMETHROWER!",
       "finisher2": "SEISMIC TOSS!"
     },
@@ -60,6 +61,8 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
       "wins": 1,
       "loses": 1,
+      "wins": 0,
+      "loses": 2,
       "finisher1": "IRON CHIN SMASH!",
       "finisher2": "CHIN SLAP!"
     },
