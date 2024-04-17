@@ -76,8 +76,8 @@
       "id": "9",
       "name": "Samus",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS5gI5-JhBygy4_vBShjiCPYJfjc1qhXacw&s",
-      "wins": 1,
-      "loses": 1,
+      "wins": 2,
+      "loses": 2,
       "finisher1": "CHARGE BLAST!",
       "finisher2": "DROPS BOMB"
     },
@@ -85,28 +85,19 @@
       "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
-      "wins": 1,
+      "wins": 2,
       "loses": 1,
       "finisher1": "SWORD!",
       "finisher2": "ONE INCH PUNCH!"
     },
     {
-      "id": "b8de",
+      "id": "4790",
       "name": "Tree",
       "image": "https://science4fun.info/wp-content/uploads/2017/05/tree.jpg",
-      "wins": " ",
-      "loses": " ",
+      "wins": 0,
+      "loses": 1,
       "finisher1": "Twig smash!",
       "finisher2": "Acorn throw!"
-    },
-    {
-      "id": "0395",
-      "name": "Lotso",
-      "image": "https://flatironschool.com/wp-content/uploads/2021/11/FIS-Campus.jpg",
-      "wins": " ",
-      "loses": " ",
-      "finisher1": "PORTAL GUN INTO BLENDER DIMENSION!",
-      "finisher2": "ONE INCH PUNCH!"
     }
   ]
 }
