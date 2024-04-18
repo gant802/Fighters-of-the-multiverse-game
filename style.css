@@ -1,6 +1,6 @@
 
 
-/*General CSS*/
+/* General CSS */
 body {
     margin: 0;
     padding: 0;
@@ -235,6 +235,7 @@ body {
     justify-content: space-around;
 }
 
+
 #add-character-form, #edit-character-form {
         width: 170px; 
         padding: 10px;
@@ -273,4 +274,5 @@ body {
         font-size: 1rem;
     }
   }
+
 

@@ -116,8 +116,8 @@ function renderChar(charArr) {
 }
 
 function p1Andp2Placeholder() {
-    p1Container.innerHTML = "";
-    p2Container.innerHTML = "";
+    p1Container.innerHTML = '';
+    p2Container.innerHTML = '';
     const p1Placeholder = document.createElement('p')
     const p2Placeholder = document.createElement('p')
     p1Placeholder.id = 'player1-placeholder'
@@ -206,11 +206,12 @@ function handleAddNewChar(e) {
 
 startFightBtn.addEventListener('click', (e) => {
     if (!isStartFightClicked) {
+        const p1Id = p1Container.querySelector('img').id
+        const p2Id = p2Container.querySelector('img').id
+
         fetch("http://localhost:3000/characters")
             .then((resp) => resp.json())
             .then(data => {
-                const p1Id = p1Container.querySelector('img').id
-                const p2Id = p2Container.querySelector('img').id
                 const player1 = data.find(char => char.id === p1Id)
                 const player2 = data.find(char => char.id === p2Id)
                 charBattle(player1, player2)
@@ -260,7 +261,7 @@ function charBattle(player1, player2) {
         finisher1Text.textContent = ''
         finisher2Text.textContent = ''
     })
-    winLoseUpdate(winner, loser)
+    winLoseUpdate(winner,loser)
 }
 
 function winLoseUpdate(winner, loser) {
