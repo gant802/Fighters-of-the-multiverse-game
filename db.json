@@ -32,7 +32,9 @@
       "name": "Finn",
       "image": "https://qph.cf2.quoracdn.net/main-qimg-df6f63f7251c7d92f1a004eaa7fe003b",
       "wins": 2,
+
       "loses": 3,
+
       "finisher1": "GAUNTLET GUN!",
       "finisher2": "FINN SWORD!"
     },
@@ -49,7 +51,9 @@
       "id": "6",
       "name": "Peter Griffin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmcRwEfXYl807XpQtVpiseexD3B5w8yCKEw&usqp=CAU",
+
       "wins": 1,
+
       "loses": 2,
       "finisher1": "CHUG CONTEST!",
       "finisher2": "GANGSTA ALTO EGO COMES OUT AND SHOOTS YOU!"
@@ -85,10 +89,12 @@
       "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
+
       "wins": 2,
       "loses": 1,
       "finisher1": "SWORD!",
       "finisher2": "ONE INCH PUNCH!"
+
     }
   ]
 }
