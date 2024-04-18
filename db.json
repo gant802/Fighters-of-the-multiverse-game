@@ -4,8 +4,8 @@
       "id": "1",
       "name": "Charizard",
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
-      "wins": 2,
-      "loses": 1,
+      "wins": 6,
+      "loses": 7,
       "finisher1": "FLAMETHROWER!",
       "finisher2": "SEISMIC TOSS!"
     },
@@ -13,8 +13,8 @@
       "id": "2",
       "name": "Naruto",
       "image": "https://pbs.twimg.com/profile_images/1493371665694138370/rSnYbeOm_400x400.jpg",
-      "wins": 2,
-      "loses": 1,
+      "wins": 7,
+      "loses": 8,
       "finisher1": "RASENSHURIKEN!",
       "finisher2": "TALK NO JUTSO!"
     },
@@ -32,9 +32,7 @@
       "name": "Finn",
       "image": "https://qph.cf2.quoracdn.net/main-qimg-df6f63f7251c7d92f1a004eaa7fe003b",
       "wins": 2,
-
       "loses": 3,
-
       "finisher1": "GAUNTLET GUN!",
       "finisher2": "FINN SWORD!"
     },
@@ -69,8 +67,8 @@
       "id": "8",
       "name": "Waldo",
       "image": "https://m.media-amazon.com/images/I/71RYSZirOEL.jpg",
-      "wins": 1,
-      "loses": 1,
+      "wins": 7,
+      "loses": 6,
       "finisher1": "VANISHES AND HIS OPPONENT STARVES TO DEATH",
       "finisher2": "CANE ATTACK"
     },
