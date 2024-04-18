@@ -23,7 +23,8 @@ let battleAreaFull = false
 
 
 
-
+//? Renders all characters from the db.json file to their own cards on the screen
+//? Also adds event listeners for edit and delete buttons. Also for clicking the image to select it as your fighter 
 function renderChar(charArr) {
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
@@ -52,7 +53,6 @@ function renderChar(charArr) {
         const loseText = document.createElement('p')
         const editCharBtn = document.createElement('button')
         const deleteCharBtn = document.createElement('button')
-
 
         img.className = "character-img"
         img.src = charObj.image
@@ -115,6 +115,7 @@ function renderChar(charArr) {
     })
 }
 
+//? Displays text "Player 1" and "Player 2" in the battle areas when no one is battling 
 function p1Andp2Placeholder() {
     p1Container.innerHTML = "";
     p2Container.innerHTML = "";
@@ -128,7 +129,7 @@ function p1Andp2Placeholder() {
     p2Container.appendChild(p2Placeholder)
 }
 
-
+//? Populates the input areas for the character you want to edit after you click the edit button
 function editChar(charObjToEdit) {
     editCharForm.name.value = charObjToEdit.name
     editCharForm.image.value = charObjToEdit.image
@@ -136,6 +137,7 @@ function editChar(charObjToEdit) {
     editCharForm.finisher2.value = charObjToEdit.finisher2
 }
 
+//? Deletes character from DOM and db.json if you click delete button on the character card
 function deleteNewChar(charToDelete){
     fetch(`http://localhost:3000/characters/${charToDelete.id}`, {
         method: 'DELETE'
@@ -144,6 +146,7 @@ function deleteNewChar(charToDelete){
     .then(data => displayAllChar())
 }
 
+//? Form event listener for editing a character
 editCharForm.addEventListener('submit', e => {
     e.preventDefault()
 
@@ -173,6 +176,7 @@ editCharForm.addEventListener('submit', e => {
 
 })
 
+//? Event listener and function to handle a new character being pushed to DOM and added to db.json
 addCharForm.addEventListener('submit', e => handleAddNewChar(e))
 
 function handleAddNewChar(e) {
@@ -204,6 +208,7 @@ function handleAddNewChar(e) {
     addCharForm.finisher2.value = ""
 }
 
+//? Event listener to begin the fight with nested function to handle who wins fight
 startFightBtn.addEventListener('click', (e) => {
     if (!isStartFightClicked) {
         fetch("http://localhost:3000/characters")
@@ -213,7 +218,7 @@ startFightBtn.addEventListener('click', (e) => {
                 const p2Id = p2Container.querySelector('img').id
                 const player1 = data.find(char => char.id === p1Id)
                 const player2 = data.find(char => char.id === p2Id)
-                charBattle(player1, player2)
+                charBattle(player1, player2)                 //nested function to handle who wins 
                 startFightBtn.textContent = "End Fight"
                 isStartFightClicked = true
             })
@@ -230,7 +235,7 @@ startFightBtn.addEventListener('click', (e) => {
     }
 })
 
-
+//? Function to determine who wins using math random. Has nested event listener to choose a finishing move
 function charBattle(player1, player2) {
     let randNum = Math.floor(Math.random() * 100) + 1;
     let winner;
@@ -263,6 +268,7 @@ function charBattle(player1, player2) {
     winLoseUpdate(winner, loser)
 }
 
+//? Updates the amount of wins or losses a character has and renders update to DOM and db.json
 function winLoseUpdate(winner, loser) {
 
     fetch(charURL + "/" + winner.id, {
