@@ -27,7 +27,7 @@ let battleAreaFull = false
 function renderChar(charArr) {
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
-   p1Andp2Placeholder()
+    p1Andp2Placeholder()
     
     charArr.forEach((charObj) => {
         
@@ -116,6 +116,8 @@ function renderChar(charArr) {
 }
 
 function p1Andp2Placeholder() {
+    p1Container.innerHTML = "";
+    p2Container.innerHTML = "";
     const p1Placeholder = document.createElement('p')
     const p2Placeholder = document.createElement('p')
     p1Placeholder.id = 'player1-placeholder'
