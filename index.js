@@ -45,6 +45,8 @@ function renderChar(charArr) {
         const h3 = document.createElement('h3')
         const p = document.createElement('p')
         const p2 = document.createElement('p')
+        const winsText = document.createElement('p')
+        const loseText = document.createElement('p')
         const editCharBtn = document.createElement('button')
         const deleteCharBtn = document.createElement('button')
 
@@ -55,6 +57,8 @@ function renderChar(charArr) {
         h3.textContent = charObj.name
         p.textContent = charObj.finisher1
         p2.textContent = charObj.finisher2
+        winsText.textContent = 'Wins: ' + charObj.wins
+        loseText.textContent = 'Losses: ' + charObj.loses
 
         editCharBtn.textContent = "Edit Fighter"
         editCharBtn.id = charObj.id
@@ -62,9 +66,9 @@ function renderChar(charArr) {
         deleteCharBtn.id = charObj.id
 
         if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].includes(charObj.id)) {
-            charCardDiv.append(img, h3, p, p2, editCharBtn);
+            charCardDiv.append(img, h3, p, p2, winsText, loseText, editCharBtn);
         } else {
-            charCardDiv.append(img, h3, p, p2, editCharBtn, deleteCharBtn);
+            charCardDiv.append(img, h3, p, p2, winsText, loseText, editCharBtn, deleteCharBtn);
         }
 
         charCard.appendChild(charCardDiv)
@@ -152,8 +156,8 @@ function handleAddNewChar(e) {
     const newCharObj = {
         name: e.target.name.value,
         image: e.target.image.value,
-        wins: " ",
-        loses: " ",
+        wins: 0,
+        loses: 0,
         finisher1: e.target.finisher1.value,
         finisher2: e.target.finisher2.value
     }
