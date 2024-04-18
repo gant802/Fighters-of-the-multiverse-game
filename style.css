@@ -4,13 +4,29 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
 }
+
+@font-face {
+    font-family: lemon-mocktail;
+    src: url(Lemon\ Mocktail\ .ttf);
+  }
 
 
 /* Title and created by*/
+@keyframes colorTransition {
+    0% { background-color: #3498db; } 
+    50% { background-color: #e74c3c; } 
+    100% { background-color: #9b59b6; } 
+  }
+
 #title {
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
+    font-family: lemon-mocktail;
+    animation: colorTransition 5s infinite alternate;
+    border-radius: 150px;
 }
 
 #created-by {
@@ -23,12 +39,61 @@ body {
     padding-bottom: 20px;
 }
 
+/* Instructions */
+#instructions-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.instruction-cards {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 10px, 20px;
+    background: #82AE8E;
+    color: black;
+}
+
+.instruction-titles {
+    text-align: center;
+    font-size: 1.7rem;
+    border-bottom: 2px solid black;
+    width: 200px;
+    margin: auto;
+    padding-top: 17px;
+}
+
+.step-info {
+    text-align: center;
+    width: 280px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.additional-info {
+    text-align: center;
+    width: 280px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+#choose-fighter-title {
+    margin: 0 auto;
+    font-size: 4rem;
+    border-bottom: 2px solid black;
+    width: 700px;
+    padding: 10px;
+}
+
 /* Character cards */
 #character-container {
     display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
+  padding: 40px 0 40px 0;
 }
 
 .character-card {
@@ -37,18 +102,53 @@ body {
     border-radius: 10px;
     justify-content: space-around;
     background-color: rgba(110, 110, 110, 0.359);
-    height: 470px;
+    height: 490px;
     width: 300px;
     overflow: hidden;
+    box-shadow: 5px 7px 7px;
+    line-height: 18px;
+    background: linear-gradient(to bottom, #303032f0, #b0b0b0);
+    color: white;
 }
 
 .character-img {
     width: auto;
-    max-width: 300px;
-    height: 12rem;
-    padding-top: 10px;
+    max-width: 290px;
+    height: 11rem;
+    padding: 10px 0 10px 0;
     border-radius: 20px;
 }
+
+.character-card h3 {
+    font-family: lemon-mocktail;
+    font-size: 1.6rem;
+}
+
+.character-card p {
+    font-style: italic;
+}
+
+.character-card button {
+    display: flex;
+    justify-content: center;
+    row-gap: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #5a62ce; /* Green */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.character-card button:hover {
+    background-color: #2a2f78;
+}
+
 
 /* Battle Area */ 
 #battle-container {
@@ -65,11 +165,13 @@ body {
     overflow: hidden;
 }
 
+#player1-placeholder, #player2-placeholder {
+    font-size: 5rem;
+}
+
 #player1-container img, #player2-container img {
-    width: auto;
-    max-width: 600px;
+    max-width: 500px;
     height: 30rem;
-    padding-top: 10px;
     border-radius: 20px;
 }
 
@@ -85,6 +187,22 @@ body {
     font-size: 4rem;
     padding: 5px;
     border-radius: 20px;
+    font-weight: bold;
+    background-color: #fd0000; 
+  border: 2px solid #c44d2e;
+  cursor: pointer;
+}
+
+#start-fight-button:hover {
+    background-color: #ff6f47; 
+    border-color: #ff6f47;
+}
+
+#finisher-container {
+    text-align: center;
+    font-size: large;
+    padding-top: 20px;
+    max-width: 500px;
 }
 
 /* Edit and add characters */ 
@@ -100,5 +218,4 @@ body {
     width: 300px;display: flex;
     justify-content: space-around;
     border: 3px solid black;
-
-} 
+}
