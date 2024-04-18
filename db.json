@@ -5,7 +5,7 @@
       "name": "Charizard",
       "image": "https://i.quotev.com/n6nf3rcoaaaa.jpg",
       "wins": 2,
-      "loses": 0,
+      "loses": 1,
       "finisher1": "FLAMETHROWER!",
       "finisher2": "SEISMIC TOSS!"
     },
@@ -13,7 +13,7 @@
       "id": "2",
       "name": "Naruto",
       "image": "https://pbs.twimg.com/profile_images/1493371665694138370/rSnYbeOm_400x400.jpg",
-      "wins": 1,
+      "wins": 2,
       "loses": 1,
       "finisher1": "RASENSHURIKEN!",
       "finisher2": "TALK NO JUTSO!"
