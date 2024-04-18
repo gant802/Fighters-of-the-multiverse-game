@@ -51,9 +51,7 @@
       "id": "6",
       "name": "Peter Griffin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmcRwEfXYl807XpQtVpiseexD3B5w8yCKEw&usqp=CAU",
-
       "wins": 1,
-
       "loses": 2,
       "finisher1": "CHUG CONTEST!",
       "finisher2": "GANGSTA ALTO EGO COMES OUT AND SHOOTS YOU!"
@@ -62,8 +60,8 @@
       "id": "7",
       "name": "Crimson Chin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
-      "wins": 3,
-      "loses": 8,
+      "wins": 5,
+      "loses": 12,
       "finisher1": "IRON CHIN SMASH!",
       "finisher2": "CHIN SLAP!"
     },
@@ -80,8 +78,8 @@
       "id": "9",
       "name": "Samus",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS5gI5-JhBygy4_vBShjiCPYJfjc1qhXacw&s",
-      "wins": 4,
-      "loses": 4,
+      "wins": 5,
+      "loses": 6,
       "finisher1": "CHARGE BLAST!",
       "finisher2": "DROPS BOMB"
     },
@@ -89,12 +87,10 @@
       "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
-
       "wins": 2,
       "loses": 1,
       "finisher1": "SWORD!",
       "finisher2": "ONE INCH PUNCH!"
-
     }
   ]
 }

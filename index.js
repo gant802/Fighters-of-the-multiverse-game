@@ -1,3 +1,4 @@
+//? Get request from db.json file
 function displayAllChar() {
     fetch("http://localhost:3000/characters")
         .then((resp) => resp.json())
@@ -6,6 +7,7 @@ function displayAllChar() {
 displayAllChar()
 
 
+//? Declaring Variables from DOM
 const charURL = 'http://localhost:3000/characters'
 const addCharForm = document.querySelector('#add-character-form')
 const editCharForm = document.querySelector('#edit-character-form')
@@ -216,9 +218,9 @@ startFightBtn.addEventListener('click', (e) => {
     } else {
         p1Container.innerHTML = ""
         p2Container.innerHTML = ""
-        winnerText.textContent = "Winner:"
-        finisher1Text.textContent = "Finisher1"
-        finisher2Text.textContent = "Finisher2"
+        winnerText.textContent = ""
+        finisher1Text.textContent = ""
+        finisher2Text.textContent = ""
         startFightBtn.textContent = "Start Fight!"
         isStartFightClicked = false
         battleAreaFull = false
@@ -245,6 +247,7 @@ function charBattle(player1, player2) {
         loser = player1
     }
 
+   
     finisher1Text.addEventListener('click', e => {
         winnerText.textContent = `${winner.name} finished ${loser.name} using ${winner.finisher1}`
         finisher1Text.textContent = ''

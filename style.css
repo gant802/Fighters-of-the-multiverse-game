@@ -37,7 +37,6 @@ body {
     width: 1000px;
     margin: 0 auto;
     padding-bottom: 20px;
-    
 }
 
 /* Instructions */
@@ -51,7 +50,6 @@ body {
 
 .instruction-cards {
     width: 300px;
-    /* border: 2px solid white; */
     border-radius: 20px;
     box-shadow: 10px, 20px;
     background: #82AE8E;
@@ -117,7 +115,7 @@ body {
     width: auto;
     max-width: 290px;
     height: 11rem;
-    padding-top: 10px;
+    padding: 10px 0 10px 0;
     border-radius: 20px;
 }
 
@@ -172,10 +170,8 @@ body {
 }
 
 #player1-container img, #player2-container img {
-    width: auto;
     max-width: 500px;
     height: 30rem;
-    padding-top: 10px;
     border-radius: 20px;
 }
 
@@ -191,6 +187,22 @@ body {
     font-size: 4rem;
     padding: 5px;
     border-radius: 20px;
+    font-weight: bold;
+    background-color: #fd0000; 
+  border: 2px solid #c44d2e;
+  cursor: pointer;
+}
+
+#start-fight-button:hover {
+    background-color: #ff6f47; 
+    border-color: #ff6f47;
+}
+
+#finisher-container {
+    text-align: center;
+    font-size: large;
+    padding-top: 20px;
+    max-width: 500px;
 }
 
 /* Edit and add characters */ 
