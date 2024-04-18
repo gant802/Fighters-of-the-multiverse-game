@@ -86,14 +86,17 @@ function renderChar(charArr) {
         })
 
         img.addEventListener('click', (e) => {
+            e.target.style.border = '2px solid red'
             const charFound = charArr.find(char => char.id === e.target.id)
             if (isPopulated === false) {
+                e.target.style.border = '5px solid blue'
                 const img = document.createElement('img')
                 img.src = charFound.image
                 img.id = charFound.id
                 p1Container.appendChild(img)
                 isPopulated = true
             } else {
+                e.target.style.border = '5px solid red'
                 const img = document.createElement('img')
                 img.src = charFound.image
                 img.id = charFound.id
