@@ -17,7 +17,7 @@ const finisher1Text = document.querySelector('#finisher1')
 const finisher2Text = document.querySelector('#finisher2')
 const winnerText = document.querySelector('#winner-name')
 let isStartFightClicked = false
-
+let battleAreaFull = false
 
 
 
@@ -25,6 +25,7 @@ let isStartFightClicked = false
 function renderChar(charArr) {
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
+   p1Andp2Placeholder()
     
     charArr.forEach((charObj) => {
         
@@ -33,12 +34,12 @@ function renderChar(charArr) {
 
         charCardDiv.addEventListener('mouseover', changeColor)
         function changeColor() {
-            charCardDiv.style.color = 'blue'
+            charCardDiv.style.color = '#FFD700'
         }
 
         charCardDiv.addEventListener('mouseout', changeColorBack)
         function changeColorBack() {
-            charCardDiv.style.color = 'black'
+            charCardDiv.style.color = 'white'
         }
 
         const img = document.createElement('img')
@@ -60,9 +61,9 @@ function renderChar(charArr) {
         winsText.textContent = 'Wins: ' + charObj.wins
         loseText.textContent = 'Losses: ' + charObj.loses
 
-        editCharBtn.textContent = "Edit Fighter"
+        editCharBtn.textContent = "EDIT FIGHTER"
         editCharBtn.id = charObj.id
-        deleteCharBtn.textContent = "Delete Fighter"
+        deleteCharBtn.textContent = "DELETE FIGHTER"
         deleteCharBtn.id = charObj.id
 
         if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].includes(charObj.id)) {
@@ -86,9 +87,11 @@ function renderChar(charArr) {
         })
 
         img.addEventListener('click', (e) => {
-            e.target.style.border = '2px solid red'
+            // e.target.style.border = '2px solid red'
             const charFound = charArr.find(char => char.id === e.target.id)
+            if (!battleAreaFull) {
             if (isPopulated === false) {
+                p1Container.innerHTML = ''
                 e.target.style.border = '5px solid blue'
                 const img = document.createElement('img')
                 img.src = charFound.image
@@ -96,14 +99,29 @@ function renderChar(charArr) {
                 p1Container.appendChild(img)
                 isPopulated = true
             } else {
+                p2Container.innerHTML = ''
                 e.target.style.border = '5px solid red'
                 const img = document.createElement('img')
                 img.src = charFound.image
                 img.id = charFound.id
                 p2Container.appendChild(img)
+                battleAreaFull = true
+                isPopulated = false
             }
-        })
+        }}
+    )
     })
+}
+
+function p1Andp2Placeholder() {
+    const p1Placeholder = document.createElement('p')
+    const p2Placeholder = document.createElement('p')
+    p1Placeholder.id = 'player1-placeholder'
+    p2Placeholder.id = 'player2-placeholder'
+    p1Placeholder.textContent = "Player 1"
+    p2Placeholder.textContent = "Player 2"
+    p1Container.appendChild(p1Placeholder)
+    p2Container.appendChild(p2Placeholder)
 }
 
 
@@ -203,6 +221,7 @@ startFightBtn.addEventListener('click', (e) => {
         finisher2Text.textContent = "Finisher2"
         startFightBtn.textContent = "Start Fight!"
         isStartFightClicked = false
+        battleAreaFull = false
         displayAllChar()
     }
 })
@@ -227,10 +246,14 @@ function charBattle(player1, player2) {
     }
 
     finisher1Text.addEventListener('click', e => {
-        alert(`${winner.name} finished ${loser.name} using ${winner.finisher1}`)
+        winnerText.textContent = `${winner.name} finished ${loser.name} using ${winner.finisher1}`
+        finisher1Text.textContent = ''
+        finisher2Text.textContent = ''
     })
     finisher2Text.addEventListener('click', e => {
-        alert(`${winner.name} finished ${loser.name} using ${winner.finisher2}`)
+        winnerText.textContent = `${winner.name} finished ${loser.name} using ${winner.finisher2}`
+        finisher1Text.textContent = ''
+        finisher2Text.textContent = ''
     })
     winLoseUpdate(winner, loser)
 }
@@ -259,7 +282,6 @@ function winLoseUpdate(winner, loser) {
 }
 
 
-//! Need to display wins and losses on card
 
 
 
