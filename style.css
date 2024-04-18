@@ -1,6 +1,6 @@
 
 
-/*General CSS*/
+ General CSS
 body {
     margin: 0;
     padding: 0;
@@ -101,6 +101,4 @@ body {
     justify-content: space-around;
     border: 3px solid black;
 
-}
-
-
+} 
