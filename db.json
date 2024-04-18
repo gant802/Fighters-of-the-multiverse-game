@@ -22,7 +22,7 @@
       "id": "3",
       "name": "Rick",
       "image": "https://sportshub.cbsistatic.com/i/2022/08/15/003d091c-a3e6-4a32-8dda-e6a5189007fd/rick-and-morty-season-6-rick-tech-upgrades-tease.jpg",
-      "wins": 2,
+      "wins": 4,
       "loses": 1,
       "finisher1": "PORTAL GUN INTO BLENDER DIMENSION!",
       "finisher2": "LAZER GUN!"
@@ -32,7 +32,9 @@
       "name": "Finn",
       "image": "https://qph.cf2.quoracdn.net/main-qimg-df6f63f7251c7d92f1a004eaa7fe003b",
       "wins": 2,
-      "loses": 1,
+
+      "loses": 3,
+
       "finisher1": "GAUNTLET GUN!",
       "finisher2": "FINN SWORD!"
     },
@@ -40,7 +42,7 @@
       "id": "5",
       "name": "Eric Cartman",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cT58_gg6ldSi3DyxggyaPn0xoUzs9jqerw&s",
-      "wins": 1,
+      "wins": 2,
       "loses": 1,
       "finisher1": "FARTANATOR 3000!",
       "finisher2": "ANNOY YOU TO DEATH!"
@@ -49,7 +51,9 @@
       "id": "6",
       "name": "Peter Griffin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmcRwEfXYl807XpQtVpiseexD3B5w8yCKEw&usqp=CAU",
-      "wins": 0,
+
+      "wins": 1,
+
       "loses": 2,
       "finisher1": "CHUG CONTEST!",
       "finisher2": "GANGSTA ALTO EGO COMES OUT AND SHOOTS YOU!"
@@ -58,8 +62,8 @@
       "id": "7",
       "name": "Crimson Chin",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi7eiEHnkXXr7UoM_VSaa0Ni0FyKCKnBlhA&s",
-      "wins": 0,
-      "loses": 2,
+      "wins": 3,
+      "loses": 8,
       "finisher1": "IRON CHIN SMASH!",
       "finisher2": "CHIN SLAP!"
     },
@@ -76,8 +80,8 @@
       "id": "9",
       "name": "Samus",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS5gI5-JhBygy4_vBShjiCPYJfjc1qhXacw&s",
-      "wins": 3,
-      "loses": 2,
+      "wins": 4,
+      "loses": 4,
       "finisher1": "CHARGE BLAST!",
       "finisher2": "DROPS BOMB"
     },
@@ -85,19 +89,12 @@
       "id": "10",
       "name": "Mulan",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QWAszmbNUPThhp-X6VIzO3KEtiE52zdpQg&s",
-      "wins": 3,
+
+      "wins": 2,
       "loses": 1,
       "finisher1": "SWORD!",
       "finisher2": "ONE INCH PUNCH!"
-    },
-    {
-      "id": "4790",
-      "name": "Tree",
-      "image": "https://science4fun.info/wp-content/uploads/2017/05/tree.jpg",
-      "wins": 0,
-      "loses": 3,
-      "finisher1": "Twig smash!",
-      "finisher2": "Acorn throw!"
+
     }
   ]
 }
