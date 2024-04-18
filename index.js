@@ -98,6 +98,7 @@ function renderChar(charArr) {
                 img.src = charFound.image
                 img.id = charFound.id
                 p2Container.appendChild(img)
+                isPopulated = false
             }
         })
     })
@@ -181,11 +182,12 @@ function handleAddNewChar(e) {
 
 startFightBtn.addEventListener('click', (e) => {
     if (!isStartFightClicked) {
+        const p1Id = p1Container.querySelector('img').id
+        const p2Id = p2Container.querySelector('img').id
+
         fetch("http://localhost:3000/characters")
             .then((resp) => resp.json())
             .then(data => {
-                const p1Id = p1Container.querySelector('img').id
-                const p2Id = p2Container.querySelector('img').id
                 const player1 = data.find(char => char.id === p1Id)
                 const player2 = data.find(char => char.id === p2Id)
                 charBattle(player1, player2)
@@ -224,12 +226,16 @@ function charBattle(player1, player2) {
     }
 
     finisher1Text.addEventListener('click', e => {
-        alert(`${winner.name} finished ${loser.name} using ${winner.finisher1}`)
+        winnerText.textContent = `${winner.name} finished ${loser.name} using ${winner.finisher1}`
+        finisher1Text.textContent = '';
+        finisher2Text.textContent = '';
     })
     finisher2Text.addEventListener('click', e => {
-        alert(`${winner.name} finished ${loser.name} using ${winner.finisher2}`)
+        winnerText.textContent = `${winner.name} finished ${loser.name} using ${winner.finisher2}`
+        finisher1Text.textContent = '';
+        finisher2Text.textContent = '';
     })
-    winLoseUpdate(winner, loser)
+    winLoseUpdate(winner,loser)
 }
 
 function winLoseUpdate(winner, loser) {
