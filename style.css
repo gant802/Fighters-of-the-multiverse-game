@@ -44,7 +44,7 @@ body {
 
 .character-img {
     width: auto;
-    max-width: 300px;
+    max-width: 290px;
     height: 12rem;
     padding-top: 10px;
     border-radius: 20px;
@@ -67,7 +67,7 @@ body {
 
 #player1-container img, #player2-container img {
     width: auto;
-    max-width: 600px;
+    max-width: 500px;
     height: 30rem;
     padding-top: 10px;
     border-radius: 20px;
