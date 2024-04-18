@@ -52,17 +52,17 @@ body {
     width: 300px;
     border-radius: 20px;
     box-shadow: 10px, 20px;
-    background: #82AE8E;
+    background: #a4c6ad;
     color: black;
 }
 
 .instruction-titles {
+    background: linear-gradient(to bottom, #303032f0, #b0b0b0);
     text-align: center;
     font-size: 1.7rem;
     border-bottom: 2px solid black;
-    width: 200px;
     margin: auto;
-    padding-top: 17px;
+    padding: 15px;
 }
 
 .step-info {
@@ -81,6 +81,7 @@ body {
 
 #choose-fighter-title {
     margin: 0 auto;
+    text-align: center;
     font-size: 4rem;
     border-bottom: 2px solid black;
     width: 700px;
@@ -89,6 +90,7 @@ body {
 
 /* Character cards */
 #character-container {
+    max-width: 2000px;
     display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -128,7 +130,9 @@ body {
     font-style: italic;
 }
 
-.character-card button {
+.character-card button, 
+#add-character-form button, 
+#edit-character-form button {
     display: flex;
     justify-content: center;
     row-gap: 5px;
@@ -145,7 +149,9 @@ body {
   transition: background-color 0.3s;
 }
 
-.character-card button:hover {
+.character-card button:hover, 
+#add-character-form button:hover, 
+#edit-character-form button:hover {
     background-color: #2a2f78;
 }
 
@@ -183,6 +189,12 @@ body {
     border: 10px solid red;
 }
 
+#fight-button-container {
+    display: block;
+    justify-content: center;
+    max-width: 300px;
+}
+
 #start-fight-button {
     font-size: 4rem;
     padding: 5px;
@@ -191,6 +203,7 @@ body {
     background-color: #fd0000; 
   border: 2px solid #c44d2e;
   cursor: pointer;
+  position: relative;
 }
 
 #start-fight-button:hover {
@@ -211,11 +224,55 @@ body {
     display: flex;
     justify-content: space-around;
     margin:  0 auto;
+    padding-top: 20px;
 }
 
 .edit-add-character-containers {
     border-radius: 15px;
-    width: 300px;display: flex;
+    width: 2900px;
+    height: 400px;
+    display: flex;
     justify-content: space-around;
-    border: 3px solid black;
 }
+
+
+#add-character-form, #edit-character-form {
+        width: 170px; 
+        padding: 10px;
+        row-gap: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 10px; 
+}
+
+.edit-add-form-title {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#add-character-form input, #edit-character-form input {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1600px) {
+    .instruction-cards {
+        width: 200px;
+    }
+    
+    .instruction-titles {
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .step-info {
+        width: 180px;
+        font-size: 1rem;
+    }
+    
+    .additional-info {
+        width: 180px;
+        font-size: 1rem;
+    }
+  }
+
+

@@ -27,7 +27,7 @@ let battleAreaFull = false
 function renderChar(charArr) {
     const charCard = document.querySelector("#character-container")
     charCard.innerHTML = ""
-   p1Andp2Placeholder()
+    p1Andp2Placeholder()
     
     charArr.forEach((charObj) => {
         
